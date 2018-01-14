@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Greetings</title>
+    <script src="./../js/angular.js"></script>
+    <script src="./../controllers/MmyApp.js"></script>
+</head>
+<body>
+    <div ng-app="MmyApp">
+        <div ng-controller="CGreetingsController">
+            <b>{{greeting}}</b>        
+        </div>
+        <hr/>
+        <div ng-controller="CDoubleController">
+            <label>Two Times of</label><input type="number" ng-model="num"/> equals {{double(num)}}
+        </div>
+        <hr/>
+        <div ng-controller="CSpicyController">
+            <button ng-click="chiliSpicy()">Chili</button>
+            <button ng-click="jalapenoSpicy()">Jalapeno</button>
+            <p>The food is {{spice}} spicy!</p>
+        </div>
+        <hr/>
+        <div ng-controller="CSpicyController2">
+            <input ng-model="customSpice"/>
+            <button ng-click="spicy('chili')">Chili</button>
+            <button ng-click="spicy(customSpice)">Custom Spice</button>
+            <p>The food is {{spice}} spicy!</p>
+        </div>
+        <hr/>
+        <div ng-controller="MainController">
+            <p>Good {{timeOfDay}}, {{name}}, {{location}}</p>
+            <div ng-controller="ChildController">
+                <p>Good {{timeOfDay}}, {{name}}, {{location}}</p>
+                <div ng-controller="GrandChildController">
+                    <p>Good {{timeOfDay}}, {{name}}, {{location}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
