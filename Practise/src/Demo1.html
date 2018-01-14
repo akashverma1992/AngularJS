@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+  <head>
+    <title>AngularJS Demo</title>
+    <script src="./../js/angular.js"></script>
+    <script src="./../controllers/MFullNameService.js"></script>
+    <!-- <script src="./../controllers/Mfullname1.js"></script> -->
+    <script src="./../controllers/Mfullname2.js"></script>
+  </head>
+  <body>
+    <div ng-app='Mfullname2' ng-controller="CFullNameController as fn">
+        <div>
+          <label>Select a prefix</label>
+          <select ng-model="pf">
+            <option value="" selected disabled>Select</option>
+            <option ng-repeat="pfx in fn.prefixes">{{pfx}}</option>
+          </select>
+        </div>
+        <div>
+          <label>Enter Firstname</label>
+          <input type="text" ng-model="fn.fname" placeholder='Firstname'/><br/>
+          <!-- <b>UserName: </b> <i>{{fname}}</i> -->
+        </div>
+      <div>
+        <label>Enter Surname</label>
+        <input type="text" ng-model="fn.sname" placeholder="Surname"/><br/>
+        <!-- <b>SurName: </b><i>{{sname}}</i> -->
+      </div>
+      <div>
+        <button ng-click="fn.fullName(pf)">Get Fullname</button><br/>
+      </div>
+    </div>
+  </body>
+</html>

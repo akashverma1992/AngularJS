@@ -1,0 +1,20 @@
+Assignments:
+    complete user reg (DEMO2)
+        add custom validation
+        create a login form with pwd, forgot pwd
+
+    create login form  
+    once user registered  with valid data take him to a landing page
+    use.net as backend, angularjs and bootstrap as frontend
+
+Try out these:
+    maintain the session
+    create your own directive and use it
+    learn angualr 2, 4, 5
+
+
+docs:       https://docs.angularjs.org/guide/templates
+directive:  https://docs.angularjs.org/api/ngRoute/directive/ngView
+mvc:        http://dotnetlab.in/angularjs/angularHome.html
+materialize:http://materializecss.com/mobile.html
+bootstrap:  http://getbootstrap.com/docs/3.3/
